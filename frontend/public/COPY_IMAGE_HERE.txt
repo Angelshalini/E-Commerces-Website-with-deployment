@@ -1,0 +1,6 @@
+Copy this file to this folder and rename it to popup-model.jpg:
+
+Source:  C:\Users\jebas\OneDrive\Desktop\e commerce\images\unsplash_a--1--Cmut8.jpg
+Rename:  popup-model.jpg
+
+Or any other image from the images folder — just name it popup-model.jpg

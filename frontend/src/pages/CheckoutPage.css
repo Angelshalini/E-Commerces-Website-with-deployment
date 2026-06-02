@@ -1,0 +1,149 @@
+/* ══════════════════════════════
+   CHECKOUT PAGE
+   Font : Poppins
+══════════════════════════════ */
+.checkout-page {
+  padding: 32px 40px 56px;
+  font-family: 'Poppins', sans-serif;
+  background: #ffffff;
+  min-height: 60vh;
+}
+
+.checkout-breadcrumb {
+  font-size: 13px; color: #888; margin-bottom: 32px;
+  display: flex; align-items: center; gap: 8px;
+}
+.checkout-bc-link { cursor: pointer; color: #484848; }
+.checkout-bc-link:hover { color: #FF8F9C; }
+.checkout-bc-sep { color: #ccc; }
+
+/* Contact section */
+.checkout-section { margin-bottom: 36px; }
+
+.checkout-section-header {
+  display: flex; align-items: center;
+  justify-content: space-between; margin-bottom: 20px;
+}
+
+.checkout-section-title {
+  font-size: 24px; font-weight: 700; color: #484848;
+  font-family: 'Poppins', sans-serif;
+}
+
+.checkout-have-account { font-size: 13px; color: #888; }
+.checkout-create-link  { color: #FF8F9C; text-decoration: none; font-weight: 600; }
+.checkout-create-link:hover { text-decoration: underline; }
+
+/* Two column layout */
+.checkout-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 36px;
+}
+
+/* Inputs */
+.checkout-input {
+  padding: 13px 16px;
+  border: 1px solid #e0e0e0; border-radius: 6px;
+  font-family: 'Poppins', sans-serif; font-size: 14px;
+  color: #484848; outline: none; background: #fafafa;
+  transition: border-color 0.2s;
+  width: 100%;
+}
+.checkout-input:focus { border-color: #FF8F9C; background: #fff; }
+.checkout-input.full  { display: block; margin-bottom: 12px; }
+
+.checkout-row {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 12px; margin-bottom: 12px;
+}
+
+.checkout-input-icon-wrap {
+  position: relative; margin-bottom: 12px;
+}
+.checkout-input-icon-wrap .checkout-input { padding-right: 40px; }
+.checkout-lock-icon {
+  position: absolute; right: 12px; top: 50%;
+  transform: translateY(-50%); font-size: 14px;
+}
+
+/* Card type row */
+.checkout-card-type {
+  display: flex; align-items: center;
+  justify-content: space-between;
+  border: 1px solid #e0e0e0; border-radius: 6px;
+  padding: 12px 16px; margin-bottom: 12px;
+  background: #fafafa;
+}
+.checkout-card-type span { font-size: 14px; color: #484848; font-weight: 500; }
+.checkout-card-icons { display: flex; gap: 6px; }
+.checkout-card-badge {
+  background: #484848; color: #fff;
+  font-size: 10px; font-weight: 700;
+  padding: 3px 8px; border-radius: 3px;
+}
+
+/* Checkbox */
+.checkout-checkbox {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 13px; color: #484848; cursor: pointer;
+  margin-top: 8px;
+}
+.checkout-checkbox input { width: 16px; height: 16px; accent-color: #FF8F9C; }
+
+/* Pay Now button */
+.checkout-pay-btn {
+  display: block; width: 100%; max-width: 480px;
+  margin: 0 auto;
+  background: #FF8F9C; color: #ffffff; border: none;
+  padding: 16px; border-radius: 30px;
+  font-family: 'Poppins', sans-serif; font-size: 15px;
+  font-weight: 700; letter-spacing: 1px; cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+.checkout-pay-btn:hover  { background: #e87585; }
+.checkout-pay-btn:active { transform: scale(0.98); }
+
+/* ── Success Popup ── */
+.checkout-success-overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 1000;
+}
+
+.checkout-success-modal {
+  background: #ffffff; border-radius: 12px;
+  padding: 48px 40px; max-width: 480px; width: 90%;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+}
+
+.checkout-success-icon {
+  display: flex; justify-content: center; margin-bottom: 20px;
+}
+
+.checkout-success-title {
+  font-size: 18px; font-weight: 700; color: #484848;
+  font-family: 'Poppins', sans-serif; margin-bottom: 14px;
+}
+
+.checkout-success-text {
+  font-size: 14px; color: #888; line-height: 1.75;
+  font-family: 'Poppins', sans-serif; margin-bottom: 28px;
+}
+
+.checkout-success-btn {
+  background: #FF8F9C; color: #ffffff; border: none;
+  padding: 13px 32px; border-radius: 30px;
+  font-family: 'Poppins', sans-serif; font-size: 13px;
+  font-weight: 700; cursor: pointer;
+  transition: background 0.2s;
+}
+.checkout-success-btn:hover { background: #e87585; }
+
+@media (max-width: 768px) {
+  .checkout-two-col { grid-template-columns: 1fr; gap: 0; }
+  .checkout-page { padding: 24px 20px; }
+}

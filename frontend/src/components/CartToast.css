@@ -1,0 +1,51 @@
+/* ══════════════════════════════
+   CART TOAST — "Added to cart" popup
+   Font : Poppins
+══════════════════════════════ */
+.cart-toast {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 36px 32px 28px;
+  min-width: 300px;
+  max-width: 380px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.18);
+  z-index: 2000;
+  font-family: 'Poppins', sans-serif;
+  animation: toast-in 0.25s ease;
+}
+
+@keyframes toast-in {
+  from { opacity: 0; transform: translate(-50%, -48%) scale(0.95); }
+  to   { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+}
+
+.cart-toast-icon {
+  display: flex; justify-content: center; margin-bottom: 14px;
+}
+
+.cart-toast-name {
+  font-size: 16px; font-weight: 700; color: #484848;
+  margin-bottom: 4px;
+}
+
+.cart-toast-msg {
+  font-size: 14px; color: #888; margin-bottom: 20px;
+}
+
+.cart-toast-actions {
+  display: flex; justify-content: center;
+}
+
+.cart-toast-ok {
+  background: #FF8F9C; color: #ffffff; border: none;
+  padding: 11px 36px; border-radius: 30px;
+  font-family: 'Poppins', sans-serif; font-size: 13px;
+  font-weight: 700; cursor: pointer;
+  transition: background 0.2s;
+}
+.cart-toast-ok:hover { background: #e87585; }

@@ -1,0 +1,117 @@
+/* ══════════════════════════════
+   TESTIMONIAL + BANNER + SERVICES
+   Font : Poppins
+══════════════════════════════ */
+.ts-section {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr 1fr;
+  gap: 0;
+  padding: 56px 40px;
+  background: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  border-top: 1px solid #f0f0f0;
+  align-items: start;
+}
+
+.ts-heading {
+  font-size: 22px;
+  font-weight: 700;
+  color: #484848;
+  margin-bottom: 24px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ── Testimonial ── */
+.ts-left { padding-right: 32px; }
+
+.ts-card {
+  border: 1px solid #f0f0f0;
+  border-radius: 8px;
+  padding: 28px 24px;
+  text-align: center;
+}
+
+.ts-avatar { display: flex; justify-content: center; margin-bottom: 14px; }
+
+.ts-avatar-circle {
+  width: 80px; height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #FF8F9C;
+}
+
+.ts-avatar-img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: top center;
+  display: block;
+}
+
+.ts-name {
+  font-size: 14px; font-weight: 700; color: #484848;
+  letter-spacing: 1px; margin-bottom: 4px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.ts-role {
+  font-size: 12px; color: #888; margin-bottom: 12px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.ts-quote-icon {
+  font-size: 40px; color: #FF8F9C; line-height: 1;
+  margin-bottom: 8px; font-family: Georgia, serif;
+}
+
+.ts-text {
+  font-size: 13px; color: #888; line-height: 1.75;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 0;
+}
+
+/* dots removed */
+
+/* ── Center Banner ── */
+.ts-center { padding: 0 20px; }
+
+.ts-banner-img {
+  width: 100%; height: 100%;
+  object-fit: cover; border-radius: 8px; display: block;
+  min-height: 340px;
+}
+
+/* ── Services ── */
+.ts-right { padding-left: 32px; }
+
+.ts-services { display: flex; flex-direction: column; gap: 20px; }
+
+.ts-service-item {
+  display: flex; align-items: center; gap: 16px;
+  cursor: pointer;
+}
+.ts-service-item:hover .ts-service-title { color: #FF8F9C; }
+
+.ts-service-icon {
+  width: 44px; height: 44px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  background: #fff5f6; border-radius: 50%;
+  padding: 10px;
+}
+
+.ts-service-icon svg { width: 22px; height: 22px; }
+
+.ts-service-title {
+  font-size: 14px; font-weight: 700; color: #484848;
+  font-family: 'Poppins', sans-serif; margin-bottom: 2px;
+  transition: color 0.2s;
+}
+
+.ts-service-sub {
+  font-size: 12px; color: #888;
+  font-family: 'Poppins', sans-serif;
+}
+
+@media (max-width: 900px) {
+  .ts-section { grid-template-columns: 1fr; padding: 36px 20px; gap: 32px; }
+  .ts-left, .ts-right { padding: 0; }
+  .ts-center { padding: 0; }
+}

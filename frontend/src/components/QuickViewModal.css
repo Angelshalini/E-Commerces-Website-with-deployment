@@ -1,0 +1,294 @@
+/* ── Quick View Modal Overlay ── */
+.qv-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  animation: qvFadeIn 0.2s ease;
+}
+
+@keyframes qvFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ── Panel ── */
+.qv-panel {
+  background: #fff;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 860px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  animation: qvSlideUp 0.25s ease;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+}
+
+@keyframes qvSlideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+/* ── Close button ── */
+.qv-close {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+  color: #555;
+  z-index: 10;
+  transition: color 0.2s;
+}
+.qv-close:hover { color: #000; }
+
+/* ── Body layout ── */
+.qv-body {
+  display: flex;
+  gap: 32px;
+  padding: 36px 32px;
+}
+
+/* ── Left: images ── */
+.qv-images {
+  display: flex;
+  gap: 12px;
+  flex-shrink: 0;
+  width: 380px;
+}
+
+.qv-thumbs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.qv-thumb {
+  width: 64px;
+  height: 72px;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 0;
+  background: #f5f5f5;
+  transition: border-color 0.2s;
+}
+.qv-thumb.active { border-color: #222; }
+.qv-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.qv-main-img-wrap {
+  flex: 1;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f5f5f5;
+  min-height: 340px;
+}
+
+.qv-main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.qv-img-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.85);
+  border: none;
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  transition: background 0.2s;
+  z-index: 2;
+}
+.qv-img-arrow:hover { background: #fff; }
+.qv-img-prev { left: 8px; }
+.qv-img-next { right: 8px; }
+
+/* ── Right: details ── */
+.qv-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.qv-name {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.qv-price-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+}
+.qv-price {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+.qv-old {
+  font-size: 15px;
+  color: #aaa;
+  text-decoration: line-through;
+}
+
+.qv-stars { display: flex; gap: 2px; }
+.qv-star  { font-size: 16px; color: #ddd; }
+.qv-star.filled { color: #f5a623; }
+
+.qv-desc {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ── Fields ── */
+.qv-field {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.qv-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #444;
+  min-width: 48px;
+}
+.qv-select {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 13px;
+  color: #333;
+  background: #fff;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.qv-select:focus { border-color: #222; }
+
+/* ── Cart row ── */
+.qv-cart-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.qv-qty {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.qv-qty button {
+  width: 36px;
+  height: 40px;
+  background: #f5f5f5;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.qv-qty button:hover { background: #e8e8e8; }
+.qv-qty span {
+  width: 44px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.qv-add-btn {
+  flex: 1;
+  padding: 11px 20px;
+  background: #1a1a1a;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.qv-add-btn:hover { background: #333; }
+
+/* ── Wishlist ── */
+.qv-wishlist-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-size: 13px;
+  color: #555;
+  cursor: pointer;
+  width: fit-content;
+  transition: border-color 0.2s, color 0.2s;
+}
+.qv-wishlist-btn:hover,
+.qv-wishlist-btn.active {
+  border-color: #e53e3e;
+  color: #e53e3e;
+}
+
+.qv-cat-tag {
+  font-size: 13px;
+  color: #888;
+  margin: 0;
+}
+.qv-cat-tag span {
+  color: #333;
+  font-weight: 600;
+}
+
+/* ── Responsive ── */
+@media (max-width: 680px) {
+  .qv-body {
+    flex-direction: column;
+    padding: 24px 18px;
+  }
+  .qv-images {
+    width: 100%;
+    flex-direction: column-reverse;
+  }
+  .qv-thumbs {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .qv-main-img-wrap {
+    min-height: 260px;
+  }
+}

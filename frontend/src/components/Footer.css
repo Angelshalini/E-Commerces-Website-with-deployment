@@ -1,0 +1,113 @@
+/* ══════════════════════════════
+   FOOTER
+   Font : Poppins
+══════════════════════════════ */
+.footer {
+  font-family: 'Poppins', sans-serif;
+  background: #1c1c2e;
+}
+
+/* Brand Directory */
+.footer-directory {
+  background: #1c1c2e;
+  padding: 32px 40px;
+  border-bottom: 1px solid #2e2e42;
+}
+
+.footer-dir-title {
+  font-size: 15px; font-weight: 700; color: #FF8F9C;
+  letter-spacing: 1.5px; margin-bottom: 16px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-dir-row {
+  display: flex; flex-wrap: wrap; align-items: center;
+  gap: 2px; margin-bottom: 10px; line-height: 1.8;
+}
+
+.footer-dir-label {
+  font-size: 14px; font-weight: 700; color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  margin-right: 8px; white-space: nowrap;
+}
+
+.footer-dir-link {
+  font-size: 14px; color: #cccccc;
+  text-decoration: none; font-family: 'Poppins', sans-serif;
+  transition: color 0.2s;
+}
+.footer-dir-link:hover { color: #FF8F9C; }
+
+.footer-dir-sep {
+  color: #555; margin: 0 6px; font-size: 14px;
+}
+
+/* Main Footer */
+.footer-main {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 40px;
+  padding: 48px 40px;
+  background: #1c1c2e;
+}
+
+.footer-col-title {
+  font-size: 15px; font-weight: 700; color: #ffffff;
+  letter-spacing: 0.8px; margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-link {
+  display: block; font-size: 14px; color: #aaaaaa;
+  text-decoration: none; font-family: 'Poppins', sans-serif;
+  margin-bottom: 12px; transition: color 0.2s;
+}
+.footer-link:hover { color: #FF8F9C; }
+
+.footer-contact-item {
+  display: flex; align-items: flex-start; gap: 10px;
+  font-size: 14px; color: #aaaaaa;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 14px; line-height: 1.6;
+}
+
+.footer-contact-icon { font-size: 14px; flex-shrink: 0; margin-top: 2px; }
+
+/* Bottom Bar */
+.footer-bottom {
+  background: #13131f;
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  border-top: 1px solid #2e2e42;
+}
+
+.footer-payments {
+  display: flex; gap: 10px; align-items: center;
+}
+
+.footer-pay-badge {
+  background: #ffffff; color: #484848;
+  font-size: 11px; font-weight: 700;
+  padding: 6px 14px; border-radius: 4px;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.footer-copy {
+  font-size: 13px; color: #888;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-brand-link {
+  color: #FF8F9C; text-decoration: none; font-weight: 600;
+}
+.footer-brand-link:hover { text-decoration: underline; }
+
+@media (max-width: 900px) {
+  .footer-main { grid-template-columns: repeat(2, 1fr); padding: 36px 20px; gap: 28px; }
+  .footer-directory { padding: 24px 20px; }
+  .footer-bottom { padding: 16px 20px; }
+}

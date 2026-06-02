@@ -1,0 +1,546 @@
+/* ══════════════════════════════
+   JEWELLERY PAGE
+══════════════════════════════ */
+.jp-page {
+  font-family: 'Poppins', sans-serif;
+  background: #fff;
+}
+
+/* ══ 1. HERO ══ */
+.jp-hero {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  min-height: 420px;
+  background: #fdf8f5;
+}
+.jp-hero-img-side {
+  flex: 0 0 55%;
+  overflow: hidden;
+}
+.jp-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.jp-hero-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 56px;
+  text-align: right;
+  background: #fdf8f5;
+}
+.jp-hero-title {
+  font-family: 'Georgia', serif;
+  font-size: 52px;
+  font-weight: 400;
+  color: #8b1a2e;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+.jp-hero-sub {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+.jp-hero-read {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  align-self: flex-end;
+  transition: color 0.2s;
+}
+.jp-hero-read:hover { color: #8b1a2e; }
+.jp-hero-read span { font-size: 18px; }
+
+/* ══ 2. GIFT CATEGORIES ══ */
+.jp-gift-section {
+  padding: 56px 40px 40px;
+  background: #fff;
+}
+.jp-gift-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 40px;
+}
+@media (max-width: 900px) { .jp-gift-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 500px) { .jp-gift-grid { grid-template-columns: 1fr; } }
+
+.jp-gift-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+.jp-gift-img-wrap {
+  width: 100%;
+  aspect-ratio: 3/4;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f0ece8;
+}
+.jp-gift-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+.jp-gift-card:hover .jp-gift-img { transform: scale(1.05); }
+.jp-gift-label {
+  font-size: 15px;
+  font-weight: 600;
+  color: #FF8F9C;
+  text-align: center;
+}
+.jp-gift-explore {
+  font-size: 13px;
+  color: #888;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* View More row */
+.jp-view-more-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 8px;
+}
+.jp-view-line {
+  flex: 1;
+  height: 1px;
+  background: #e0e0e0;
+}
+.jp-view-more-btn {
+  padding: 10px 28px;
+  border: 1px solid #FF8F9C;
+  border-radius: 4px;
+  background: #fff;
+  color: #FF8F9C;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s;
+  font-family: 'Poppins', sans-serif;
+}
+.jp-view-more-btn:hover { background: #FF8F9C; color: #fff; }
+
+/* ══ 3. SPECIAL PROMO — content left, image right ══ */
+.jp-promo-section {
+  display: flex;
+  align-items: stretch;
+  min-height: 480px;
+  background: #fff;
+}
+.jp-promo-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 56px;
+}
+.jp-promo-title {
+  font-size: 42px;
+  font-weight: 800;
+  color: #FF8F9C;
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+.jp-promo-sub {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 28px;
+  max-width: 380px;
+}
+.jp-gift-code-row {
+  display: flex;
+  align-items: center;
+  border: 1.5px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+  max-width: 380px;
+  margin-bottom: 32px;
+}
+.jp-gift-code-input {
+  flex: 1;
+  padding: 12px 16px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+}
+.jp-redeem-btn {
+  padding: 12px 24px;
+  background: #FF8F9C;
+  color: #fff;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-family: 'Poppins', sans-serif;
+}
+.jp-redeem-btn:hover { background: #e87585; }
+.jp-stats-row {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.jp-stat {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.jp-stat-num {
+  font-size: 28px;
+  font-weight: 800;
+  color: #FF8F9C;
+}
+.jp-stat-label {
+  font-size: 12px;
+  color: #888;
+  line-height: 1.4;
+}
+.jp-stat-divider {
+  font-size: 20px;
+  color: #ddd;
+}
+.jp-promo-img-side {
+  flex: 0 0 50%;
+  overflow: hidden;
+}
+.jp-promo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ══ 4. GIFT CARD BANNER — full width image only ══ */
+.jp-giftcard-section {
+  width: 100%;
+  line-height: 0;
+}
+.jp-giftcard-img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  display: block;
+}
+.jp-giftcard-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: #c8a84b;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+}
+.jp-giftcard-desc {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 24px;
+  max-width: 340px;
+}
+.jp-giftcard-buy {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+.jp-giftcard-buy:hover { color: #c8a84b; }
+.jp-giftcard-buy span { font-size: 18px; }
+
+/* ══ 5. SPECIAL GIFT — 4 person cards ══ */
+.jp-special-section {
+  padding: 56px 40px;
+  background: #fff;
+}
+.jp-special-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #FF8F9C;
+  text-align: center;
+  margin-bottom: 12px;
+}
+.jp-special-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 36px;
+}
+.jp-special-line {
+  flex: 1;
+  height: 1.5px;
+  background: #c8a84b;
+}
+.jp-special-diamond {
+  color: #c8a84b;
+  font-size: 12px;
+}
+.jp-special-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+@media (max-width: 900px) { .jp-special-grid { grid-template-columns: repeat(2, 1fr); } }
+
+.jp-special-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+.jp-special-img-wrap {
+  width: 100%;
+  aspect-ratio: 3/4;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f5f0eb;
+}
+.jp-special-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+.jp-special-card:hover .jp-special-img { transform: scale(1.05); }
+.jp-special-label {
+  font-size: 15px;
+  font-weight: 600;
+  color: #FF8F9C;
+  text-align: center;
+}
+.jp-special-explore {
+  font-size: 13px;
+  color: #888;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* ══ 6. EXPERT SECTION — ring full width image only ══ */
+.jp-expert-section {
+  width: 100%;
+  line-height: 0;
+}
+.jp-expert-img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* ══ 7. PRODUCTS ══ */
+.jp-products-section {
+  padding: 48px 40px 60px;
+  background: #fafafa;
+}
+.jp-products-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.jp-products-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+.jp-filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.jp-filter-btn {
+  padding: 7px 18px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  background: #fff;
+  font-size: 13px;
+  color: #555;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: 'Poppins', sans-serif;
+}
+.jp-filter-btn:hover { border-color: #888; color: #222; }
+.jp-filter-btn.active { background: #1a1a1a; color: #fff; border-color: #1a1a1a; }
+
+/* Product Grid */
+.jp-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+@media (max-width: 1024px) { .jp-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 720px)  { .jp-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px)  { .jp-grid { grid-template-columns: 1fr; } }
+
+.jp-card {
+  position: relative;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: box-shadow 0.25s;
+}
+.jp-card:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.1); }
+
+.jp-badge {
+  position: absolute;
+  top: 12px; left: 12px;
+  z-index: 2;
+  padding: 3px 9px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.jp-badge-sale { background: #e53e3e; color: #fff; }
+.jp-badge-new  { background: #38a169; color: #fff; }
+
+.jp-img-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  background: #f5f5f5;
+}
+.jp-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 16px;
+  display: block;
+  transition: transform 0.35s ease;
+}
+.jp-card:hover .jp-img { transform: scale(1.05); }
+
+.jp-hover-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.15);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 18px;
+  animation: jpFade 0.2s ease;
+}
+@keyframes jpFade { from { opacity: 0; } to { opacity: 1; } }
+
+.jp-quick-view-btn {
+  background: #fff;
+  color: #1a1a1a;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 22px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+  transition: background 0.2s;
+}
+.jp-quick-view-btn:hover { background: #f0f0f0; }
+
+.jp-info { padding: 12px 14px 16px; }
+.jp-name-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 2px;
+}
+.jp-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+  cursor: pointer;
+  flex: 1;
+  transition: color 0.2s;
+}
+.jp-name:hover { color: #555; }
+.jp-wish-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2px;
+  flex-shrink: 0;
+  transition: transform 0.2s;
+}
+.jp-wish-btn:hover { transform: scale(1.2); }
+.jp-cat { font-size: 12px; color: #aaa; margin: 0 0 4px; }
+.jp-stars { display: flex; gap: 2px; margin-bottom: 6px; }
+.jp-star  { font-size: 13px; color: #ddd; }
+.jp-star.filled { color: #f5a623; }
+.jp-price {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.jp-old {
+  font-size: 13px;
+  color: #aaa;
+  text-decoration: line-through;
+  font-weight: 400;
+}
+.jp-add-btn {
+  width: 100%;
+  padding: 9px;
+  background: #1a1a1a;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: background 0.2s;
+  animation: jpFade 0.15s ease;
+  font-family: 'Poppins', sans-serif;
+}
+.jp-add-btn:hover { background: #333; }
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .jp-hero, .jp-promo-section, .jp-giftcard-section, .jp-expert-section {
+    flex-direction: column;
+  }
+  .jp-hero-img-side, .jp-promo-img-side,
+  .jp-giftcard-img-side, .jp-expert-img-side {
+    flex: 0 0 260px;
+  }
+  .jp-hero-content, .jp-promo-content,
+  .jp-giftcard-content, .jp-expert-content {
+    padding: 32px 24px;
+    text-align: left;
+  }
+  .jp-hero-content { text-align: center; }
+  .jp-hero-read { align-self: center; }
+  .jp-hero-title { font-size: 36px; }
+  .jp-promo-title { font-size: 30px; }
+}

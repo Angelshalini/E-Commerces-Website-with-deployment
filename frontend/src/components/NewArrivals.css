@@ -1,0 +1,222 @@
+/* ══════════════════════════════
+   NEW ARRIVALS
+   Colors : #FF8F9C  #FFFFFF  #484848
+   Font   : Poppins
+══════════════════════════════ */
+
+.na-section {
+  padding: 56px 40px;
+  background: #ffffff;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Header */
+.na-header {
+  margin-bottom: 36px;
+}
+
+.na-heading {
+  font-size: 38px;
+  font-weight: 700;
+  color: #484848;
+  margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.na-sub {
+  font-size: 15px;
+  color: #888888;
+  line-height: 1.7;
+  max-width: 520px;
+}
+
+/* Grid — 3 columns */
+.na-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* Card */
+.na-card {
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: box-shadow 0.25s;
+}
+.na-card:hover {
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.09);
+}
+
+/* Image wrap */
+.na-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #f5f5f5;
+}
+
+.na-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.na-card:hover .na-img {
+  transform: scale(1.04);
+}
+
+/* ADD TO CART button — appears on hover */
+.na-add-btn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #FF8F9C;
+  color: #ffffff;
+  border: none;
+  padding: 14px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: background 0.2s;
+  text-align: center;
+}
+.na-add-btn:hover {
+  background: #e87585;
+}
+
+/* Info section */
+.na-info {
+  padding: 14px 4px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.na-name-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.na-name {
+  font-size: 17px;
+  font-weight: 700;
+  color: #484848;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Stars */
+.na-stars {
+  display: flex;
+  gap: 2px;
+}
+
+.star {
+  font-size: 17px;
+  color: #d0d0d0;
+}
+
+.star.filled {
+  color: #f5a623;
+}
+
+.na-brand {
+  font-size: 14px;
+  color: #888888;
+  font-family: 'Poppins', sans-serif;
+}
+
+.na-reviews {
+  font-size: 13px;
+  color: #aaaaaa;
+  font-family: 'Poppins', sans-serif;
+}
+
+.na-price-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 6px;
+}
+
+.na-price {
+  font-size: 20px;
+  font-weight: 700;
+  color: #484848;
+  font-family: 'Poppins', sans-serif;
+}
+
+.na-sold {
+  font-size: 13px;
+  color: #FF8F9C;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .na-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .na-section {
+    padding: 40px 20px;
+  }
+}
+
+@media (max-width: 540px) {
+  .na-grid {
+    grid-template-columns: 1fr;
+  }
+  .na-heading {
+    font-size: 26px;
+  }
+}
+
+/* ── Quick View hover overlay ── */
+.na-hover-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.18);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 20px;
+  animation: naFadeIn 0.2s ease;
+}
+@keyframes naFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.na-quick-view-btn {
+  background: #fff;
+  color: #1a1a1a;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 22px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+  transition: background 0.2s;
+}
+.na-quick-view-btn:hover { background: #f0f0f0; }
+
+/* Add to cart button in info (not absolute) */
+.na-info .na-add-btn {
+  position: static;
+  width: 100%;
+  margin-top: 8px;
+  border-radius: 5px;
+  animation: naFadeIn 0.15s ease;
+}
